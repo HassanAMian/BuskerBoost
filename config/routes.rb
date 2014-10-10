@@ -3,7 +3,7 @@ BuskerBoost::Application.routes.draw do
     member do
       get :following, :followers
     end
-  end
+    end
   resources :sessions,      only: [:new, :create, :destroy]
   resources :statuses,    only: [:create, :destroy]
   resources :relationships, only: [:create, :destroy]
@@ -13,5 +13,4 @@ BuskerBoost::Application.routes.draw do
   match '/signout', to: 'sessions#destroy',     via: 'delete'
   match '/contact', to: 'static_pages#contact', via: 'get'
   match '/events',   to: 'static_pages#events',   via: 'get'
-  
 end
