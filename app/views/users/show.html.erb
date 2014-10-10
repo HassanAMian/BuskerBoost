@@ -1,0 +1,26 @@
+<% provide(:title, @user.name) %>
+<div class="row">
+  <aside class="span4">
+    <section>
+      <a href="<%= user_path(current_user) %>">
+  <%= gravatar_for current_user, size: 52 %>
+</a>
+<h1>
+  <a href="<%= user_path(current_user) %>"><%= current_user.name %></a>
+</h1>
+    </section>
+    <section>
+      <%= render 'shared/stats' %>
+    </section>
+  </aside>
+  <div class="span8">
+    <%= render 'follow_form' if signed_in? %>
+    <% if @user.statuses.any? %>
+      <h3>Statuses (<%= @user.statuses.count %>)</h3>
+      <ol class="status">
+        <%= render @statuses %>
+      </ol>
+      <%= will_paginate @statuses %>
+    <% end %>
+  </div>
+</div>
