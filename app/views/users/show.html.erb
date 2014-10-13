@@ -2,8 +2,13 @@
 <div class="row">
   <aside class="span4">
     <section>
-<%= gravatar_for @user %>
-<%= @user.name %>
+  <%= gravatar_for @user %>
+</a>
+<%= render 'follow_form' if signed_in? %>
+<h1>
+  <%= @user.name %>
+</h1>
+
     </section>
     <section>
       <%= render 'shared/stats' %>
