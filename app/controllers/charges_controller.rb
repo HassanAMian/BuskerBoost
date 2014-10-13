@@ -1,4 +1,7 @@
+
 class ChargesController < ApplicationController
+require "stripe"
+Stripe.api_key = "sk_test_GJKlVP7188FiTknosUMrirWW"
 
 def new
 end
@@ -23,4 +26,6 @@ rescue Stripe::CardError => e
   flash[:error] = e.message
   redirect_to charges_path
 end
+
+
 end
