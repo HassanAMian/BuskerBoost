@@ -15,7 +15,19 @@
       <%= render 'shared/stats' %>
     </section>
     <section>
-      paypal api
+        <form accept-charset="UTF-8" action="/charges" method="post"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="&#x2713;" /><input name="authenticity_token" type="hidden" value="+nkoHfi+V6y4MKPcQanBe7cHYF3Vm5SOEQ3C0veaVBw=" /></div>
+  <article>
+   
+    <label class="amount">
+      <span>Want to leave a tip?</span>
+    </label>
+  </article>
+
+  <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+          data-key="pk_test_8JyzvWzbNRnhLiPtuSF1NFib"
+          data-description="Send a Tip"
+          data-amount="100"></script>
+</form>
     </section>
     <section>
       soundcloud api

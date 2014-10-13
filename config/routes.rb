@@ -7,6 +7,7 @@ BuskerBoost::Application.routes.draw do
   resources :sessions,      only: [:new, :create, :destroy]
   resources :statuses,    only: [:create, :destroy]
   resources :relationships, only: [:create, :destroy]
+  resources :charges 
   root to: 'static_pages#home'
   match '/signup',  to: 'users#new',            via: 'get'
   match '/signin',  to: 'sessions#new',         via: 'get'
