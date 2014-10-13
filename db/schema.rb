@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20130315230445) do
+ActiveRecord::Schema.define(version: 20141013052839) do
 
   create_table "relationships", force: true do |t|
     t.integer  "follower_id"
@@ -32,6 +32,11 @@ ActiveRecord::Schema.define(version: 20130315230445) do
   end
 
   add_index "statuses", ["user_id", "created_at"], name: "index_statuses_on_user_id_and_created_at"
+
+  create_table "upload_jobs", force: true do |t|
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "users", force: true do |t|
     t.string   "name"
