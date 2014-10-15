@@ -4,7 +4,6 @@ describe Status do
 
   let(:user) { FactoryGirl.create(:user) }
   before do
-    # This code is not idiomatically correct.
     @status = Status.new(content: "Lorem ipsum", user_id: user.id)
   end
 
@@ -23,8 +22,4 @@ describe Status do
     it { should_not be_valid }
   end
 
-  describe "with content that is too short" do
-    before { @status.content = "a" * 3 }
-    it { should_not be_valid }
-  end
 end
