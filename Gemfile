@@ -11,6 +11,7 @@ gem 'will_paginate', '3.0.4'
 gem 'bootstrap-will_paginate', '0.0.9'
 gem 'soundcloud', '0.3.2'
 gem 'stripe', :git => 'https://github.com/stripe/stripe-ruby'
+gem 'aws-sdk'
 
 
 
