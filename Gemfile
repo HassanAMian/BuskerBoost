@@ -34,14 +34,6 @@ group :test do
 
   # Uncomment this line on OS X.
   gem 'growl', '1.0.3'
-
-  # Uncomment these lines on Linux.
-  # gem 'libnotify', '0.8.0'
-
-  # Uncomment these lines on Windows.
-  # gem 'rb-notifu', '0.0.4'
-  # gem 'win32console', '1.3.2'
-  # gem 'wdm', '0.1.0'
 end
 
 gem 'sass-rails', '4.0.1'
