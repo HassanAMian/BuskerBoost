@@ -1,10 +1,11 @@
 # BuskerBoost
 This application is a Twitter-like app that allows you to follow and tip street performers, who can post status messages with information on where they're going to be.  The Stripe API also allows you to pay a tip (currently in $1 increments) on the artisits profile page. 
 
+As of June 2015, I am starting a PHP version of this application called BuskerBoostPHP.  As features are added to that application, I will be coming back to make additions to BuskerBoost as well.  Any changes will be noted in this documentation.
+
 This hobby project is a work in progress, and I intend to add some other features in the future, including:
 - soundcloud API
 - ability to embed youtube videos using a URL
-- phone application version for iOS
 - crowdfunding ability with links on the user profile page 
 
 The project was made in Rails 4.  Gems used:
